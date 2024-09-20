@@ -57,54 +57,11 @@ This architecture allows for a scalable and efficient chatbot solution that can 
 - pip
 - PostgreSQL (if you're using it as your database)
 
+### Clone the Repository
+[Instructions to clone the repository]
 
-Copy code
-# Chatbot Application Setup Guide
-
-## Create a Virtual Environment
+### Create a Virtual Environment
 It's recommended to use a virtual environment to manage your dependencies.
 
-``bash
+```bash
 python -m venv venv
-
-## Activate the Virtual Environment
-
-#On Windows:
-
-``bash
-.\venv\Scripts\activate
-
-##On macOS/Linux:
-
-``bash
-source venv/bin/activate
-
-##Install Dependencies
-To install the necessary dependencies, run:
-
-``bash
-pip install -r requirements.txt
-
-##Set Up the Database
-Create a PostgreSQL database for your application. Update the DATABASES settings in settings.py:
-
-##Make Migrations
-Run the following command to create migrations for your models:
-
-``bash
-python manage.py makemigrations
-
-##Apply Migrations
-To apply the migrations, execute:
-
-``bash
-python manage.py migrate
-
-##Run the Development Server
-Start the development server with:
-
-``bash
-python manage.py runserver
-
-##Access the Application
-Open your web browser and navigate to http://127.0.0.1:8000/ to access the chatbot application.
