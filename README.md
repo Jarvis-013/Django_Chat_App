@@ -53,6 +53,13 @@ This architecture allows for a scalable and efficient chatbot solution that can 
 
 ## Getting Started
 
+##Video
+
+
+https://github.com/user-attachments/assets/49bb1e66-c232-4fa8-9a3c-4ffb84a1541c
+
+
+
 ### Prerequisites
 
 - Python 3.x
