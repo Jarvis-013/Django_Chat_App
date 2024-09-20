@@ -1,6 +1,6 @@
-# Chatbot Application
+# Chat Application
 
-A sophisticated chatbot application built with Django, utilizing the OpenAI API for intelligent conversational capabilities. This application offers real-time messaging, user authentication, and a seamless chat experience.
+A sophisticated chat application built with Django, utilizing the OpenAI API for intelligent conversational capabilities. This application offers real-time messaging, user authentication, and a seamless chat experience.
 
 ## Table of Contents
 
@@ -23,6 +23,7 @@ A sophisticated chatbot application built with Django, utilizing the OpenAI API 
 ## Features
 
 - User authentication (login, registration)
+- Chat interface for user-user interaction
 - Chat interface for user-bot interaction
 - Real-time messaging with Django Channels
 - Integration with OpenAI's GPT for intelligent responses
