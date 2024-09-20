@@ -1,8 +1,8 @@
 # Introduction
 
-## Name- RAJAT KUMAR
-## University- IIT (BHU), VAranasi
-## Department- Electronics Engineering
+- Name- RAJAT KUMAR
+- University- IIT (BHU), Varanasi
+- Department- Electronics Engineering
 
 # Chat Application
 
