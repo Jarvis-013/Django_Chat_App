@@ -21,10 +21,6 @@ A sophisticated chat application built with Django, utilizing the OpenAI API for
   - [Install Dependencies](#install-dependencies)
   - [Set Up the Database](#set-up-the-database)
   - [Run the Development Server](#run-the-development-server)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Features
 
