@@ -63,5 +63,43 @@ This architecture allows for a scalable and efficient chatbot solution that can 
 ### Create a Virtual Environment
 It's recommended to use a virtual environment to manage your dependencies.
 
-```bash
 python -m venv venv
+
+# Chatbot Application Commands
+
+## Activate the Virtual Environment
+
+### On Windows:
+.\venv\Scripts\activate
+
+### On macOS/Linux:
+source venv/bin/activate
+
+## Install Dependencies
+pip install -r requirements.txt
+
+## Set Up the Database
+# Update settings.py with the following DATABASES configuration:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_db_name',
+        'USER': 'your_db_user',
+        'PASSWORD': 'your_db_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+## Make Migrations
+python manage.py makemigrations
+
+## Apply Migrations
+python manage.py migrate
+
+## Run the Development Server
+python manage.py runserver
+
+## Access the Application
+# Open your web browser and navigate to:
+http://127.0.0.1:8000/
