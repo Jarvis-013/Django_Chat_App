@@ -1,0 +1,123 @@
+.titanic {
+    float: none;
+}
+
+.messages {
+    position: relative;
+    padding: 10px 10px 0 10px;
+    margin: 0;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.messages .message {
+    clear: both;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.messages .message.left .avatar {
+    background-color: #ff6b6b;
+    float: left;
+}
+
+.messages .message.left .text_wrapper {
+    background: linear-gradient(145deg, #ffcc99, #ffe6cb);
+    margin-left: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.messages .message.left .text_wrapper::after,
+.messages .message.left .text_wrapper::before {
+    right: 100%;
+    border-right-color: #ffe6cb;
+}
+
+.messages .message.left .text {
+    color: #a65329;
+}
+
+.messages .message.right .avatar {
+    background-color: #4d9de0;
+    float: right;
+}
+
+.messages .message.right .text_wrapper {
+    background: linear-gradient(145deg, #c7eafc, #a9d6f3);
+    margin-right: 20px;
+    float: right;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.messages .message.right .text_wrapper::after,
+.messages .message.right .text_wrapper::before {
+    left: 100%;
+    border-left-color: #c7eafc;
+}
+
+.messages .message.right .text {
+    color: #2c7697;
+}
+
+.messages .message .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-right: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.messages .message .text_wrapper {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 12px;
+    width: calc(100% - 85px);
+    min-width: 100px;
+    position: relative;
+}
+
+.messages .message .text_wrapper::after,
+.messages .message .text_wrapper:before {
+    top: 18px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.messages .message .text_wrapper::after {
+    border-width: 12px;
+    margin-top: 0;
+}
+
+.messages .message .text_wrapper::before {
+    border-width: 14px;
+    margin-top: -2px;
+}
+
+.messages .message .text_wrapper .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.list-group {
+    max-height: 570px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

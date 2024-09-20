@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block extracss %}
+  <style type="text/css">
+    body {
+      background-color: #f8f9fa; /* Light gray for a clean, modern look */
+      margin-top: 80px;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    .logo {
+      font-size: 2.5em;
+      font-weight: 600;
+      font-family: 'Audiowide', cursive;
+      color: #14213d; /* Deep navy for a sleek touch */
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); /* Softer shadow for elegance */
+      border-radius: 12px;
+      padding: 30px;
+      background-color: #ffffff;
+    }
+    .card-header {
+      background-color: #14213d;
+      color: white;
+      font-size: 1.5em;
+      text-align: center;
+      border-radius: 12px 12px 0 0;
+    }
+    .card-body {
+      padding-top: 30px;
+    }
+    .form-control {
+      border-radius: 50px;
+      padding: 15px 20px;
+      font-size: 1rem;
+      border: 1px solid #ced4da;
+    }
+    .btn-primary {
+      background-color: #92c35e;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #80aa50;
+    }
+    .login-or {
+      position: relative;
+      text-align: center;
+      margin: 30px 0;
+    }
+    .login-or .span-or {
+      display: inline-block;
+      position: relative;
+      background-color: #ffffff;
+      padding: 0 10px;
+      z-index: 2;
+      font-size: 1.1em;
+      color: #6c757d;
+    }
+    .login-or .hr-or {
+      border-top: 1px solid #e9ecef;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      z-index: 1;
+    }
+    .alert {
+      border-radius: 50px;
+    }
+  </style>
+{% endblock %}
+
+{% block main %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="{% block col_class %}col-lg-6 col-md-8 col-sm-10{% endblock col_class %}">
+        <p class="logo">Chat WebApp</p>
+        <div class="card">
+          <h4 class="card-header">{% block cardheader %}Log in{% endblock cardheader %}</h4>
+          <div class="card-body">
+            {% if form.non_field_errors %}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {% for error in form.non_field_errors %}
+                  <p{% if forloop.last %} class="mb-0"{% endif %}>{{ error }}</p>
+                {% endfor %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {% endif %}
+            {% block form %}{% endblock form %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
