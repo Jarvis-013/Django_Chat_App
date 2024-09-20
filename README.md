@@ -78,19 +78,6 @@ source venv/bin/activate
 ## Install Dependencies
 pip install -r requirements.txt
 
-## Set Up the Database
-# Update settings.py with the following DATABASES configuration:
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_db_name',
-        'USER': 'your_db_user',
-        'PASSWORD': 'your_db_password',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
 ## Make Migrations
 python manage.py makemigrations
 
