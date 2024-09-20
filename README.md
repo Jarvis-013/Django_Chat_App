@@ -1,3 +1,9 @@
+# Introduction
+
+## Name- RAJAT KUMAR
+## University- IIT (BHU), VAranasi
+## Department- Electronics Engineering
+
 # Chat Application
 
 A sophisticated chat application built with Django, utilizing the OpenAI API for intelligent conversational capabilities. This application offers real-time messaging, user authentication, and a seamless chat experience.
