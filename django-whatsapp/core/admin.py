@@ -11,4 +11,4 @@ class MessageModelAdmin(ModelAdmin):
     date_hierarchy = 'timestamp'
 
 
-site.register(MessageModel, MessageModelAdmin)
+site.register(MessageModel, MessageModelAdmin,Group)

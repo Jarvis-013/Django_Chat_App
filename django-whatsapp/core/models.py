@@ -71,3 +71,23 @@ class Chat(models.Model):
 
     def __str__(self):
         return f'{self.user.username}: {self.message}'
+
+
+
+class ChatGroup(models.Model):
+    name = models.CharField(max_length=255)
+    members = models.ManyToManyField(User, related_name='chat_groups')
+    admin = models.ForeignKey(User, related_name='admin_groups', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+class GroupMessage(models.Model):
+    group = models.ForeignKey(ChatGroup, related_name='messages', on_delete=models.CASCADE)
+    sender = models.ForeignKey(User, on_delete=models.CASCADE)
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.sender}: {self.message}'
+

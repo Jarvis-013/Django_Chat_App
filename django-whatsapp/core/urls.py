@@ -18,5 +18,7 @@ urlpatterns = [
     # path('chatbot/', views.chatbot, name='chatbot'),
     path('chatbot/', login_required(
         TemplateView.as_view(template_name='core/chatbot.html')), name='chatbot'),
-
+    path('create-group/', views.create_group, name='create_group'),
+    path('group-chat/<int:group_id>/', GroupChatView.as_view(), name='group_chat'),
+    # path('group-chat/<int:group_id>/', GroupChatView.as_view(), name='group_chat'),
 ]
